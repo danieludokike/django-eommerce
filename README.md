@@ -31,7 +31,7 @@ Follow these steps to set up the project on your local machine after cloning.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/django-ecommerce.git
+git clone https://github.com/danieludokike/django-eommerce.git
 cd django-ecommerce
 ```
 
