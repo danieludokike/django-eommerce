@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" class="img-fluid rounded shadow-sm">
+        {% else %}
+            <div class="bg-secondary text-white text-center py-5 rounded">No Image Available</div>
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        <h2>{{ product.name }}</h2>
+        <h4 class="text-primary my-3">${{ product.price }}</h4>
+        <p>{{ product.description }}</p>
+        <p class="text-muted">In stock: {{ product.stock }}</p>
+        <a href="{% url 'cart_add' product.id %}" class="btn btn-success btn-lg">Add to Cart</a>
+    </div>
+</div>
+{% endblock %}
